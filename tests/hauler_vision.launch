@@ -1,0 +1,18 @@
+<launch>
+  <node pkg="axis_camera" type="axis.py" name="axis_driver">
+    <param name="hostname" value="192.168.0.90" />
+    <param name="username" value="root" />
+    <param name="password" value="root" />
+  </node>
+  <node pkg="axis_camera" type="axis_ptz.py" name="axis_ptz">
+    <param 
+
+  <node pkg="mouse_driver" type"
+
+  <node pkg="image_view" type="image_view" name="image_view">
+    <remap from="image" to="image_raw/compressed" />
+    <param name="image_transport" value="compressed" />
+  </node>
+
+  </group>
+</launch>
