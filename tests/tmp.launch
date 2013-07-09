@@ -2,15 +2,13 @@
   <param name="hostname" value="192.168.0.90" />
   <param name="username" value="root" />
   <param name="password" value="root" />
-  <param name="width" value="704" />
-  <param name="height" value="480" />
+  <param name="width" value="1920" />
+  <param name="height" value="1080" />
   <param name="flip" value="False" />
-  <node pkg="hauler_vision" name="h_v_controller" type="hauler_vision_controller.py">
-  </node>
-  <node pkg="mouse_driver" name="mouse_monitor" type="simple_mouse_driver.py">
-  </node>
-  <node pkg="axis_camera" name="PTZ" type="axis_ptz.py">
-  </node>
+  <node pkg="hauler_vision" name="h_v_controller" type="hauler_vision_controller.py"></node>
+  <node pkg="mouse_driver" name="mouse_monitor" type="simple_mouse_driver.py"></node>
+  <node pkg="axis_camera" name="PTZ" type="axis_ptz.py"></node>
+  <node pkg="mouse_accumulator" name="mouse_accumulator" type="simple_mouse_accumulator.py"></node>
 
   <node pkg="axis_camera" name="cutover_camera" type="axis.py">
   </node>
